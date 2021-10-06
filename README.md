@@ -1,0 +1,19 @@
+asgiref                           3.4.1
+backports.entry-points-selectable 1.1.0
+distlib                           0.3.3
+Django                            3.2.7
+filelock                          3.3.0
+importlib-metadata                4.8.1
+php                               1.2.1
+pip                               21.2.3
+platformdirs                      2.4.0
+protobuf                          3.18.0
+pytz                              2021.3
+setuptools                        57.4.0
+six                               1.16.0
+sqlparse                          0.4.2
+typing-extensions                 3.10.0.2
+virtualenv                        20.8.1
+virtualenvwrapper-win             1.2.6
+zipp                              3.6.0
+React-bootstrap			  1.6.4# ensolvers
