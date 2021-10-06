@@ -1,0 +1,1 @@
+python3 ./backend_api/manage.py runserver & npm start --prefix ./frontend
