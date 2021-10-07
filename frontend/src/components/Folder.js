@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Row, Col, Form, Button, Modal } from 'react-bootstrap'
 
-const Folder = ({ id, name, editFolder, deleteFolder }) => {
+const Folder = ({ id, name, tasks, editFolder, deleteFolder }) => {
     const [show, setShow] = useState(false);
 
     const [newName, setName] = useState(name)
@@ -18,6 +18,7 @@ const Folder = ({ id, name, editFolder, deleteFolder }) => {
     	const folder = {
     		id,
     		name,
+			tasks,
     	}
     	editFolder(folder)
     	setName(name)

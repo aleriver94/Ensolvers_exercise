@@ -8,6 +8,7 @@ const AddFolder = ({ addFolder }) => {
         e.preventDefault()
         addFolder({
             name,
+            tasks: [],
         })
     }
 

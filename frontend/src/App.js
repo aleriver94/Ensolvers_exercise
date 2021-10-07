@@ -152,6 +152,7 @@ function App() {
                   key={index}
                   id={folder.id}
                   name={folder.name}
+				  tasks={folder.tasks}
                   editFolder={editFolder}
                   deleteFolder={deleteFolder}
                 />
