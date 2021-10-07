@@ -8,14 +8,13 @@ const AddFolder = ({ addFolder }) => {
         e.preventDefault()
         addFolder({
             name,
-            completed: false,
         })
     }
 
     return (
             <Form>
                     <Form.Group controlId='name'>
-                        <Form.Control type='text' placeholder='New Task' onChange={e => setName(e.target.value)}/>
+                        <Form.Control type='text' placeholder='New Folder' onChange={e => setName(e.target.value)}/>
                     </Form.Group>
                     <Button variant='dark' submit='submit' className='my-2 btn-block' onClick={addFolderHandler}>Add</Button>
             </Form>

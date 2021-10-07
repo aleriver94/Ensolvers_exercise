@@ -28,7 +28,7 @@ function App() {
 
 	const getFolders = async () => {
 		try {
-			const response = await axios.get('/backend_api/todo/')
+			const response = await axios.get('/backend_api/folder/')
 			const { data } = response
 			setFolders(data)
 		} catch (err) {
@@ -58,7 +58,7 @@ function App() {
 	const addFolder = async newFolder => {
 		try {
 			console.log(newFolder)
-			await axios.post('/backend_api/todo/', newFolder)
+			await axios.post('/backend_api/folder/', newFolder)
 			getFolders()
 		} catch (err) {
 			console.log(err)
@@ -87,7 +87,7 @@ function App() {
 
 	const editFolder = async folder => {
 		try {
-			await axios.put(`/backend_api/todo/${folder.id}/`, folder)
+			await axios.put(`/backend_api/folder/${folder.id}/`, folder)
 			getFolders()
 		} catch(err) {
 			console.log(err)
@@ -105,7 +105,7 @@ function App() {
 
 	const deleteFolder = async id => {
 		try {
-			await axios.delete(`/backend_api/todo/${id}/`)
+			await axios.delete(`/backend_api/folder/${id}/`)
 			getFolders()
 		} catch(err) {
 			console.log(err)
@@ -134,6 +134,14 @@ function App() {
 								<AddTask addTask={addTask} />
 								{tasks.map((task, index) => (
 									<Task key={index} id={task.id} title={task.title} completeTask={completeTask} editTask={editTask} deleteTask={deleteTask} />
+								))}
+						</Card>
+						<Row className='p-2'></Row>
+						<Card className='p-5'>
+								<h3>Folder List</h3>
+								<AddFolder addFolder={addFolder} />
+								{folders.map((folder, index) => (
+									<Folder key={index} id={folder.id} name={folder.name} editFolder={editFolder} deleteFolder={deleteFolder} />
 								))}
 						</Card>
 					</Col>
