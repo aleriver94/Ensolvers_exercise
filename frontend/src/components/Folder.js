@@ -15,15 +15,13 @@ const Folder = ({ id, name, editFolder, deleteFolder }) => {
     const handleShow = () => setShow(true);
 
     const editFolderHandler = (name) => {
-    	handleClose()
     	const folder = {
     		id,
     		name,
     	}
-
     	editFolder(folder)
-
     	setName(name)
+		handleClose()
     }
 
 	return (
